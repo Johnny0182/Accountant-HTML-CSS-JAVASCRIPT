@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnny Leyva</title>
+    <!-- Link to media queries and to my MAIN style.css sheet-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    
+</head>
+<body>
+    <!-- Desktop navigation -->
+    <nav id="desktop-nav">
+    <!-- Logo or Website Main Header-->
+        <div class="logo"><strong>Johnny Leyva</strong></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about"><strong>About</strong></a></li> <!-- Each Section of the website will have its own if tag-->
+                <li><a href="#experience"><strong>Experience</strong></a></li> <!-- Each Section of the website will have its own if tag-->
+                <li><a href="#projects"><strong>Projects</strong></a></li> <!-- this creates a little menu section once they click on an item it gets shadowed purple as in its been clicked on b4-->
+                <li><a href="#contact"><strong>Contact</strong></a></li> <!-- We classified the navigation links when theyve been visited they get highlighted in stock settings-->
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- here we will create our burger menu with the 3 lines --- very famous -->
+    
+    <nav id="hamburger-nav">
+        <div class="logo">Johnny Leyva</div>
+        <div class="hamburger-menu">
+              <!-- OnClick: Is the only Javascript in my html file -->
+               <!-- OnClick: is added to every link so that on click: -->
+               <!-- OnClick: the menu will close and open the new link -->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt="Johnny-Leya-Profile-Picture"
+            >
+        </div>
+        <div class="section__text">
+            <p class="section__text">Hello, I'm</p>
+            <h1 class="title">Johnny Leyva</h1>
+            <p class="section__text__p2">Accounting Major at CSUDH!</p>
+            <div class="btn-container">
+                <button 
+                class="btn btn-color-2" 
+                onclick="window.open('./assets/JOHNNY FINAL RESUME.pdf')"
+            > 
+                
+                Download Resume
+<button class="btn btn-color-1" onclick="location.href='#contact'">
+                
+                Contact Me
+            </button>
+            </div>
+            <!-- Source and alt=text classifying as icon -->
+            <div id="socials-container">
+                <img 
+                    src="./assets/linkedin.png"
+                    alt="My LinkedIn Profile" 
+                    class="icon" 
+                    onclick="location.href='https://www.linkedin.com/in/johnny-leyva-125259167/'">
+                <img 
+                    src="./assets/github.png" 
+                    alt="My Github Profile" 
+                    class="icon" 
+                    onclick="location.href='https://www.github.com/Johnny0182/'">
+            </div> 
+<!-- This closing div tag was misplaced and should be aligned with the opening div tag above -->
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+            </div>
+            <div class="section__text">
+                <div class="about-details-container">
+                    <div class="details-container experience-container">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                        <h3>Experience</h3>
+                        <p>3+ years of <br>Security and Customer Service Experience</p>
+                        <p>2+ years of <br>Janitorial Experience (Amazon Warehouse)</p>
+                        <p>1+ years of  <br>Working with kids and adults with special needs</p>
+
+                    </div>
+                    <div class="details-container education-container">
+                        <img src="./assets/education.png" alt="Education icon" class="icon" />
+                        <h3>Education</h3>
+                        <p>Currently pursuing a B.S. in Accounting at: <br>California State University Dominguez Hills</p>
+                        <p class="expected-graduation">Expected Graduation: June 2025</p>
+                        <br><p>Recieved a California State University Breadth Certificate<br> at Cerritos College in June 2022</p>
+
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <h3>Skills</h3>
+                    <div class="skills-icons">
+                        <img src="./assets/1.png" alt="Skill 1" class="skill-icon">
+                        <img src="./assets/2.png" alt="Skill 2" class="skill-icon">
+                        <img src="./assets/3.png" alt="Skill 3" class="skill-icon">
+                        <img src="./assets/4.png" alt="Skill 4" class="skill-icon">
+                        <img src="./assets/5.png" alt="Skill 5" class="skill-icon">
+                        <img src="./assets/6.png" alt="Skill 6" class="skill-icon">
+                        <img src="./assets/7.png" alt="Skill 7" class="skill-icon">
+                        <img src="./assets/8.png" alt="Skill 8" class="skill-icon">
+                        <img src="./assets/9.png" alt="Skill 9" class="skill-icon">
+                        <img src="./assets/10.png" alt="Skill 10" class="skill-icon">
+                        <img src="./assets/11.png" alt="Skill 11" class="skill-icon">
+                        <img src="./assets/12.png" alt="Skill 12" class="skill-icon">
+                        <img src="./assets/13.png" alt="Skill 13" class="skill-icon">
+                        <img src="./assets/14.png" alt="Skill 14" class="skill-icon">
+                        <img src="./assets/15.png" alt="Skill 15" class="skill-icon">
+                        <img src="./assets/16.png" alt="Skill 16" class="skill-icon">
+                        <img src="./assets/17.png" alt="Skill 17" class="skill-icon">
+                        <img src="./assets/18.png" alt="Skill 18" class="skill-icon">
+                        <img src="./assets/19.png" alt="Skill 19" class="skill-icon">
+                        <img src="./assets/20.png" alt="Skill 20" class="skill-icon">
+                    </div>
+                </div>
+                </div>
+                <div class="skills-description">
+                    <p>I am proficient in <strong>Excel</strong> and the entire <strong>Microsoft Office suite</strong>, with extensive experience in file management using OneDrive and Dropbox. 
+                    I have experience with <strong>Python, HTML, CSS, and JavaScript</strong>. I also have a solid understanding of <strong>Linux</strong> systems and virtual machines. My diverse skill set allows me to 
+                    navigate various technologies and platforms efficiently, making me a valuable asset in any tech-driven environment. I am actively pursuing my <strong>Bachelor's Degree in Accounting</strong> 
+                    and am currently in my last year at <strong>California State University Dominguez Hills</strong>! I hope to bring my diverse technical skills to my future accounting job, where I aim to improve 
+                    efficiency. With my experience in automating invoices using Python, I plan to implement similar automation solutions to simplify financial tasks, if allowed of course! Aside from my experience 
+                    in Accounting and Finance I also have over 3 years of experience as a security guard at the <strong>Los Angeles Cruise Center</strong> where I developed my interpersonal skills. I also have experience working in 
+                    schools and have worked with adults with special needs. I am thankful for all the jobs I have worked up until this point in my career due to the experience I have gained in different environments. I love working with
+                    teams and am experienced in working with a wide variety of people.</p>
+                </div>
+                
+            </div>
+        </div>
+                <section id="experience">
+                    <h2 class="title">Experience</h2>
+            
+                    <div class="jobs-container">
+                        <div class="job1">
+                            <img src="./assets/job1.png" alt="Job 1" class="job-image">
+                            <div>
+                            <h3 class="job-title">Security at American Guard Services Inc. </h3>
+                            <p class="job-description">Operate X-Ray Machines and patrol, ensuring security at Port of Los Angeles.</p>
+                            <p class="job-duration">Duration:(June 2021 - Present)</p>
+                        </div>
+                    </div>
+                        <div class="job2">
+                            <img src="./assets/job2.png" alt="Job 2" class="job-image">
+                            <div>
+                            <h3 class="job-title">Security at United Guard Security </h3>
+                            <p class="job-description">Controlled access, inspected vehicles, and patrolled in Vernon, CA.</p>
+                            <p class="job-duration">Duration: (January 2021 - May 2021)</p>
+                        </div>
+                    </div>
+                        <div class="job3">
+                            <img src="./assets/job3.png" alt="Job 3" class="job-image">
+                            <div>
+                            <h3 class="job-title">Custodian at KBS LLC </h3>
+                            <p class="job-description">Maintained cleanliness, operated equipment, and ensured safety in Torrance, CA.</p>
+                            <p class="job-duration">Duration: (March 2019 - January 2021)</p>
+                        </div>
+                    </div>
+                        <div class="job4">
+                            <img src="./assets/job4.png" alt="Job 4" class="job-image">
+                            <div>
+                            <h3 class="job-title">Job Coach at Aim Higher, Inc.</h3>
+                            <p class="job-description">Supported clients with special needs in finding and maintaining employment in West Covina, CA.</p>
+                            <p class="job-duration">Duration: (October 2018 - March 2019)</p>
+                        </div>
+                    </div>
+                        <div class="job5">
+                            <img src="./assets/job5.png" alt="Job 5" class="job-image">
+                            <div>
+                            <h3 class="job-title">Instructor Aide at St. Albert the Great School</h3>
+                            <p class="job-description">Assisted in classroom activities and provided educational support.</p>
+                            <p class="job-duration">Duration: (May 2017 - July 2018)</p>
+                        </div>
+                    </div>
+                        <div class="job6">
+                            <img src="./assets/job6.png" alt="Job 6" class="job-image">
+                            <div>
+                            <h3 class="job-title">Campaign Canvasser District #44</h3>
+                            <p class="job-description">Conducted outreach and engagement for the current 44th district representative: Nanette Diaz Barragan.</p>
+                            <p class="job-duration">Duration: (January 2016 - March 2016)</p>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="color-container">
+                <div class="article-container">
+                    <img src="./assets/project1.png" alt="Project 1" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Project One</h2>
+                <h3 class="experience-sub-title project-title">"A School Website"</h3>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                </div>
+            </div>
+            <div class="color-container">
+                <div class="article-container">
+                    <img src="./assets/project2.png" alt="Project 2" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Project Two</h2>
+                <h3 class="experience-sub-title project-title">"An Invoice Generator"</h3>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                </div>
+            </div>
+            <div class="color-container">
+                <div class="article-container">
+                    <img src="./assets/project3.png" alt="Project 3" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <h3 class="experience-sub-title project-title">"An Electric Company Website"</h3>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+    <div>
+    </div>
+    <section id="contact">
+
+  <h1 class="title">Contact Me:</h1>
+  <div class="contact-info-upper-container">
+    <div class="contact-info-container">
+      <img
+        src="./assets/email.png"
+        alt="Email icon"
+        class="icon contact-icon email-icon"
+      />
+      <p><a href="mailto:johnny.leyva2@gmail.com">johnny.leyva2@gmail.com</a></p>
+    </div>
+    <div class="contact-info-container">
+      <img
+        src="./assets/linkedin.png"
+        alt="LinkedIn icon"
+        class="icon contact-icon"
+      />
+      <p><a href="https://www.linkedin.com/in/johnny-leyva-125259167">LinkedIn</a></p>
+    </div>
+  </div>
+</section>
+<footer>
+  <nav>
+    <div class="nav-links-container">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <p>Copyright &#169; 2024 Johnny Leyva. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+    
+    <script src="script.js"></script>
+    </body>
+    </html>
+    

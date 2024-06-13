@@ -1,0 +1,555 @@
+
+/* Import Montserrat font from Google Fonts using the html/css link provided */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset default margin and padding for all elements */
+* {
+     margin: 0;
+     padding: 0;
+}
+/* Set Montserrat as the default font family for the body */
+body {
+      font-family: "Poppins", sans-serif;
+
+    };
+/* Enable smooth transitions when clicking menu items */
+/* This way when you click it scrolls down smoothly not automatic new page */
+/* which can feel clunky and not smooth */
+html {
+    scroll-behavior: smooth; 
+}
+/* It will activate that smooth scroll we used above */
+p {
+    color: rgb(85, 85, 85);
+
+}
+
+/* transition = 300ms */
+/* Here we define our button so that when you click menu item */
+/* It will activate that smooth scroll we used above and sets a timer for it */
+a, .btn {
+    transition: all 300ms ease;
+
+}
+/* Desktop NAV */
+
+nav, 
+.nav-links {
+    display: flex;
+}
+/* Defining height for the links menu */
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+/* Defining the gap between links and font size */
+.nav-links {
+    gap: 1rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+/* Defining the color of our NAV links */
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white
+}
+/* Defining hover effect so that it gets underlined when hovered over */
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+/* Changing logo font size/ my name */
+.logo {
+    font-size: 2.5rem;
+}
+/* Change the fact that the cursor will not change when hovering over logo */
+/* For example: it will start to copy/ paste logo instead of it acting as a button */
+
+.logo:hover {
+    cursor: default;
+}
+/* Hamburgesa Menu */
+#hamburger-nav {
+    display: none;
+}
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+
+}
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px)
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px)
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* Defining Main Website Sections */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10re
+    m;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.section-container {
+    display: flex;
+}
+/* Profile Section */
+/* Profile Section */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container {
+    grid-row: 1 / span 2; /* Span two rows */
+    justify-self: center; /* Center the image horizontally within its grid cell */
+    max-width: 100%; /* Prevent the image from extending beyond the container's width */
+    margin-left: 1rem; /* Add a small margin to the left to create space from the left wall */
+}
+
+/* About Section */
+#about .section-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns, with the first one taking up one fraction and the second one taking up two fractions */
+    gap: 2rem; /* Gap between grid items */
+    margin-top: 2rem;
+}
+
+#about .section__pic-container {
+    grid-row: 1 / span 2; /* Span two rows */
+    justify-self: center; /* Center the image horizontally within its grid cell */
+    max-width: 100%; /* Prevent the image from extending beyond the container's width */
+    margin-left: 2.5rem; /* Add a small margin to the left to create space from the left wall */
+}
+
+#about .section__pic-container img {
+    max-height: 80%; /* Adjust the value to make the image slightly smaller */
+    width: auto; /* Maintain aspect ratio */
+    margin-top: 2rem; /* Adjust the value to add some space at the top */
+    margin-bottom: 2rem; /* Adjust the value to add some space at the bottom */
+    border-radius: 15px; /* Adjust the value to control the roundness of the corners */
+}
+
+#about .section__text {
+    grid-column: 2; /* Second column */
+    display: flex; /* Use flexbox to align experience and education horizontally */
+    flex-direction: column; /* Stack experience and education vertically */
+    justify-content: center; /* Center the content vertically */
+}
+
+#about .about-details-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between experience and education */
+    margin-bottom: 2rem; /* Add some space below the details */
+}
+
+#about .skills-container {
+    grid-column: 1 / span 2; /* Span two columns */
+    grid-row: 2; /* Second row */
+    justify-self: center; /* Center the skills container horizontally within its grid cell */
+}
+
+#about .skills-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); /* Adjust the number of columns based on the screen size */
+    gap: 1rem; /* Gap between icons */
+    justify-items: center; /* Center icons horizontally */
+}
+
+/* Adjust the width and height of the skills icons as needed */
+#about .skill-icon {
+    width: 80%;
+    height: auto;
+    max-width: 75px; /* Set a maximum width to prevent the icons from becoming too large */
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+
+}
+.section__text p1 {
+    text-align: center;
+
+}
+.section__text p2 {
+    font-size: 1.60rem;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2.5rem; /* Adjust the margin as needed */
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* Icons */
+.icon {
+    cursor: pointer;
+    height: 2rem;
+    position: relative; /* Added for positioning the link */
+}
+
+
+/* Buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1
+.btn-color-2 {
+    border: 1px solid rgb(30, 30, 30);
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(0, 0, 0);
+    color: white;
+}
+.btn-color-1:hover {
+    background: rgb(30, 30, 30);
+}
+
+.btn-color-2 {
+    background: none;
+}
+.btn-color-2:hover {
+    border: rgb(255, 255, 255);
+}
+.btn-container {
+    gap: 1rem;
+}
+/* Add this to your existing CSS */
+
+/* Skills Section */
+.skills-container {
+    text-align: center;
+}
+
+.skills-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Experience Section */
+#experience {
+    padding: 10vh 5rem; /* Adjust padding as needed */
+    margin-top: 40vh; /* Adjust margin-top to move the section down */
+    text-align: center; /* Center align the text inside the section */
+}
+
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 3rem; /* Gap between jobs */
+    justify-content: center; /* Center the grid horizontally */
+    margin-right: 10rem; /* Gap from right wall */
+}
+
+.job {
+    border: 1px solid #000; /* Thin black border */
+    padding: 1rem; /* Padding inside job box */
+    transition: all 0.3s ease; /* Smooth transition effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.job:hover {
+    border-color: #666; /* Border color on hover */
+}
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.job-description {
+    margin-bottom: 0.5rem;
+}
+
+.job-duration {
+    font-style: italic;
+    color: #666;
+}
+
+.job-image {
+    width: 150px; /* Adjust image size as needed */
+    height: 150px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease; /* Smooth transition effect for hover */
+}
+
+.job-image:hover {
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+
+
+
+
+/* Education and Experience Containers */
+.experience-container,
+.education-container {
+    flex: 1;
+    margin-right: 2rem;
+    margin-top: 12rem;
+    border: 1px solid black; /* Thin black border */
+    border-radius: 10px; /* Rounded edges */
+    padding: 1rem; /* Optional: Add padding for better appearance */
+}
+
+.education-container {
+    margin-right: 0;
+}
+
+/* Text Container */
+.text-container {
+    margin-top: 2rem;
+}
+.skills-container {
+    text-align: center;
+}
+
+.skills-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+
+.skills-description {
+    margin-top: 1rem;
+    border: 1px solid black;
+    padding: 10px;
+    max-width: 1200px; /* Adjust the width as needed */
+    margin: 2 auto; /* Center the paragraph */
+    font-size: 1.3rem; /* Set the font size to 1.2rem or adjust as needed */
+    color: black; /* Set the font color to black */
+}
+/* Projects Section */
+
+/* PROJECTS SECTION */
+
+/* PROJECTS SECTION */
+
+#projects {
+    position: relative;
+    padding: 5vh 2rem;
+    text-align: center;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-img {
+    border-radius: 1rem;
+    width: 80%;
+    height: auto;
+}
+
+.project-title {
+    margin: 1rem 0;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.project-btn {
+    color: black;
+    border-color: rgb(0, 0, 0);
+    margin: 1rem;
+}
+
+/* Grid layout for projects */
+.experience-details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__text__p1 {
+    margin-top: 7rem;
+}
+
+/* CONTACT */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+  
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  .contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+  }
+  
+  .contact-info-container p {
+    font-size: larger;
+  }
+  
+  .contact-icon {
+    cursor: default;
+  }
+  
+  .email-icon {
+    height: 2.5rem;
+  }
+  
+  /* FOOTER SECTION */
+  
+  footer {
+    height: 26vh;
+    margin: 0 1rem;
+  }
+  
+  footer p {
+    text-align: center;
+  }
+
+
+
