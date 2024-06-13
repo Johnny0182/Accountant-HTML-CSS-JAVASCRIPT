@@ -246,14 +246,23 @@ section {
 }
 .section__text p2 {
     font-size: 1.60rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .title {
     font-size: 4rem;
     text-align: center;
     margin-bottom: 2.5rem; /* Adjust the margin as needed */
+    color: cornflowerblue; /* Example style */
 }
+
+.experience-title {
+    /* Your specific styles for the Experience heading */
+    font-size: 4rem; /* Example style */
+    color: cornflowerblue; /* Example style */
+}
+
+
 
 #socials-container {
     display: flex;
@@ -341,7 +350,7 @@ section {
 /* Experience Section */
 #experience {
     padding: 10vh 5rem; /* Adjust padding as needed */
-    margin-top: 40vh; /* Adjust margin-top to move the section down */
+    margin-top: 7vh; /* Adjust margin-top to move the section down */
     text-align: center; /* Center align the text inside the section */
 }
 
@@ -455,7 +464,7 @@ section {
 
 #projects {
     position: relative;
-    padding: 5vh 2rem;
+    padding: 100vh 2rem;
     text-align: center;
 }
 
@@ -497,8 +506,9 @@ section {
 }
 
 .section__text__p1 {
-    margin-top: 7rem;
+    margin-top: 1rem;
 }
+
 
 /* CONTACT */
 
