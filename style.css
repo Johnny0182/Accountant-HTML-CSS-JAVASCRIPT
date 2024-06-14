@@ -65,7 +65,35 @@ a:hover {
 /* Changing logo font size/ my name */
 .logo {
     font-size: 2.5rem;
+    display: inline-block; /* Ensure the logo is inline-block for better control */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the animation */
 }
+
+/* Add animation effect on hover */
+.logo:hover {
+    animation: wave 1s ease-in-out infinite; /* Apply wave animation on hover */
+    cursor: default; /* Prevent cursor change */
+}
+
+/* Keyframes for the wave effect */
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg); /* Initial and final state */
+    }
+    20% {
+        transform: rotate(10deg); /* Rotate to the right */
+    }
+    40% {
+        transform: rotate(-10deg); /* Rotate to the left */
+    }
+    60% {
+        transform: rotate(10deg); /* Rotate to the right */
+    }
+    80% {
+        transform: rotate(-10deg); /* Rotate to the left */
+    }
+}
+
 /* Change the fact that the cursor will not change when hovering over logo */
 /* For example: it will start to copy/ paste logo instead of it acting as a button */
 
@@ -255,6 +283,7 @@ section {
     margin-bottom: 2.5rem; /* Adjust the margin as needed */
     color: cornflowerblue; /* Example style */
 }
+
 
 .experience-title {
     /* Your specific styles for the Experience heading */
