@@ -463,8 +463,8 @@ section {
 /* PROJECTS SECTION */
 
 #projects {
-    position: relative;
-    padding: 100vh 2rem;
+    margin-top: 6vh; /* Adjust to reduce gap */
+    padding: 4vh 5rem; /* Consistent padding with other sections */
     text-align: center;
 }
 
@@ -517,6 +517,7 @@ section {
     justify-content: center;
     flex-direction: column;
     height: 70vh;
+    margin-top: 35vh;
   }
   
   .contact-info-upper-container {
