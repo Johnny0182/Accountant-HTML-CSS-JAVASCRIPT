@@ -7,7 +7,12 @@
     <!-- Link to media queries and to my MAIN style.css sheet-->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="icon" href="./assets/gato.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/catt.ico" type="image/x-icon">
+<!-- Audio elements -->
+    <audio id="about-audio" src="./assets/about1.mp3"></audio>
+    <audio id="experience-audio" src="./assets/about1.mp3"></audio>
+    <audio id="projects-audio" src="./assets/about1.mp3"></audio>
+    <audio id="contact-audio" src="./assets/contact1.mp3"></audio>
     
 </head>
 <body>
@@ -17,10 +22,10 @@
         <div class="logo" onclick="window.location.reload();"><strong>Johnny Leyva</strong></div>
         <div>
             <ul class="nav-links">
-                <li><a href="#about"><strong>About</strong></a></li> <!-- Each Section of the website will have its own if tag-->
-                <li><a href="#experience"><strong>Experience</strong></a></li> <!-- Each Section of the website will have its own if tag-->
-                <li><a href="#projects"><strong>Projects</strong></a></li> <!-- this creates a little menu section once they click on an item it gets shadowed purple as in its been clicked on b4-->
-                <li><a href="#contact"><strong>Contact</strong></a></li> <!-- We classified the navigation links when theyve been visited they get highlighted in stock settings-->
+                <li><a href="#about" onclick="playSound('about')"><strong>About</strong></a></li>
+                <li><a href="#experience" onclick="playSound('experience')"><strong>Experience</strong></a></li>
+                <li><a href="#projects" onclick="playSound('projects')"><strong>Projects</strong></a></li>
+                <li><a href="#contact" onclick="playSound('contact')"><strong>Contact</strong></a></li>
             </ul>
         </div>
     </nav>
@@ -39,10 +44,10 @@
             <span></span>
         </div>
         <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="#about" onclick="playSound('about'); toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="playSound('experience'); toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="playSound('projects'); toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="playSound('contact'); toggleMenu()">Contact</a></li>
         </div>
         </div>
     </nav>
@@ -267,10 +272,10 @@
   <nav>
     <div class="nav-links-container">
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" onclick="playSound('about')">About</a></li>
+                <li><a href="#experience" onclick="playSound('experience')">Experience</a></li>
+                <li><a href="#projects" onclick="playSound('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="playSound('contact')">Contact</a></li>
       </ul>
     </div>
   </nav>
