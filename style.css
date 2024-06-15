@@ -10,7 +10,7 @@
 /* Set Montserrat as the default font family for the body */
 body {
       font-family: "Poppins", sans-serif;
-      cursor: url('./assets/triforce.png'), auto;
+      cursor: url('./assets/sword.png'), auto;
     };
 /* Enable smooth transitions when clicking menu items */
 /* This way when you click it scrolls down smoothly not automatic new page */
@@ -202,16 +202,6 @@ section {
     max-width: 100%; /* Prevent the image from extending beyond the container's width */
     margin-left: 1rem; /* Add a small margin to the left to create space from the left wall */
 }
-.section__pic-container img {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
-}
-
-.section__pic-container img:hover {
-    transform: scale(1.1); /* Scale the image slightly */
-    box-shadow: 0 10px 20px rgb(21, 75, 255); /* Add a shadow effect */
-    cursor: pointer; /* Change cursor to pointer */
-}
-
 /* About Section */
 #about .section-container {
     display: grid;
